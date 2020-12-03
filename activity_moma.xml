@@ -7,18 +7,143 @@
     tools:context=".Moma">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="16dp"
         android:padding="10dp"
-        android:text="Welcome to New Activity"
+        android:text="Museum of Modern Art"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/momaPic"
+        android:layout_width="178dp"
+        android:layout_height="171dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="225dp"
+        android:maxHeight="225dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/moma"
+        app:layout_constraintBottom_toTopOf="@+id/adultSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/adultPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginBottom="16dp"
+        android:text="Adult: $25"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/seniorPrice"
+        app:layout_constraintStart_toStartOf="@+id/seniorPrice" />
+
+    <TextView
+        android:id="@+id/seniorPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Senior: $18"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/childPrice"
+        app:layout_constraintEnd_toEndOf="@+id/childPrice" />
+
+    <TextView
+        android:id="@+id/childPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="285dp"
+        android:text="Student: $14"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.621"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/adultSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        app:layout_constraintStart_toEndOf="@+id/adultPrice"
+        app:layout_constraintTop_toTopOf="@+id/adultPrice" />
+
+    <Spinner
+        android:id="@+id/seniorSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/adultSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/adultSpinner" />
+
+    <Spinner
+        android:id="@+id/childSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/seniorSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/seniorSpinner" />
+
+    <Button
+        android:id="@+id/calculatePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="60dp"
+        android:text="Calculate Ticket Price"
+        app:layout_constraintStart_toStartOf="@+id/ticketPrice"
+        app:layout_constraintTop_toBottomOf="@+id/childPrice" />
+
+    <EditText
+        android:id="@+id/ticketPrice"
+        android:layout_width="251dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="left"
+        android:text="ticket price"
+        app:layout_constraintBottom_toTopOf="@+id/salesTax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatePrice" />
+
+    <EditText
+        android:id="@+id/salesTax"
+        android:layout_width="251dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="76dp"
+        android:gravity="left"
+        android:text="sales tax"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ticketTotal"
+        android:layout_width="251dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="left"
+        android:text="ticket total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salesTax" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
