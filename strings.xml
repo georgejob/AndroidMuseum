@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AndroidMuseum</string>
+    <string name="app_intro">NYC Museum Tickets</string>
+
+    <string name="adult_price1">Adult: $25</string>
+    <string name="senior_price1">Senior: $18</string>
+    <string name="student_price1">Student: $14</string>
+
+    <string name="adult_price2">Adult: $23</string>
+    <string name="senior_price2">Senior: $18</string>
+    <string name="student_price2">Student: $18</string>
+
+    <string name="adult_price3">Adult: $25</string>
+    <string name="senior_price3">Senior: $18</string>
+    <string name="student_price3">Student: $18</string>
+
+    <string name="adult_price4">Adult: $25</string>
+    <string name="senior_price4">Senior: $17</string>
+    <string name="student_price4">Student: $12</string>
+
+    <string name="ticket_price">ticket price</string>
+    <string name="sales_tax">sales tax</string>
+    <string name="ticket_total">ticket total</string>
+</resources>

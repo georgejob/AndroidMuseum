@@ -91,13 +91,13 @@ public class Srgm extends AppCompatActivity implements AdapterView.OnItemSelecte
         int seniorTotal = Integer.valueOf(spin2.getSelectedItem().toString()) * 18;
         int studentTotal = Integer.valueOf(spin3.getSelectedItem().toString()) * 18;
         int ticketPrice = adultTotal + seniorTotal + studentTotal;
-        ticketEditText.setText("ticket price: $" + Integer.toString(ticketPrice));
+        ticketEditText.setText(getString(R.string.ticket_price) + ": $" + Integer.toString(ticketPrice));
 
         DecimalFormat df = new DecimalFormat("#.00");
         double taxAmount = ticketPrice * 0.08875;
-        taxEditText.setText("sales tax: $" + String.format( "%.2f", taxAmount));
+        taxEditText.setText(getString(R.string.sales_tax) + ": $" + String.format( "%.2f", taxAmount));
 
-        totalEditText.setText("ticket total: $" + String.format( "%.2f", ticketPrice + taxAmount));
+        totalEditText.setText(getString(R.string.ticket_total) + ": $" + String.format( "%.2f", ticketPrice + taxAmount));
     }
 
     @Override

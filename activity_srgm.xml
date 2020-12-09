@@ -52,7 +52,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Adult: $25"
+        android:text="@string/adult_price3"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
@@ -67,7 +67,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Senior: $18"
+        android:text="@string/senior_price3"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.414"
@@ -82,7 +82,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Student: $18"
+        android:text="@string/student_price3"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.387"
@@ -149,7 +149,8 @@
         android:text="ticket price"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculatePrice" />
+        app:layout_constraintTop_toBottomOf="@+id/calculatePrice"
+        android:editable="false"/>
 
     <EditText
         android:id="@+id/salesTax"
@@ -164,7 +165,8 @@
         android:text="sales tax"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ticketPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/ticketPrice"
+        android:editable="false"/>
 
     <EditText
         android:id="@+id/ticketTotal"
@@ -182,6 +184,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/salesTax"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.301"
+        android:editable="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
